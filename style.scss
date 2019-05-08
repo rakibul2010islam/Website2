@@ -1,0 +1,98 @@
+// Resetting.............
+*{
+	margin: 0;
+	padding: 0;
+}
+
+// Coding starts.........
+
+@mixin centeringItems{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.headerTop{
+	display: flex;
+	margin: 0 5rem;
+}
+
+.header-top-left{
+	display: flex;
+	flex-basis: 50%;
+	a{
+		border-radius: 50%;
+		background: #b4b4b4;
+		width: 2rem;
+		height: 2rem;
+		margin: .7rem .4rem;
+		@include centeringItems;
+		.fab{
+			color: white;
+		}
+		&:hover{
+			background: black;
+		}
+		text-decoration: none;
+	}
+}
+
+.header-top-right{
+	margin-left: auto;
+	margin-top: .7rem;
+	ul{
+		display: flex;
+		list-style: none;
+
+		a{
+			text-decoration: none;
+			display: inline-block;
+			padding: .3rem;
+			&:hover{
+				color: orange;
+			}
+		}
+	}
+
+	li{
+		border-right: .1rem solid black;
+	}
+	li:last-child{
+		border-right: none;
+	}
+}
+
+header hr{
+	border-top: .1rem solid #76586e;
+}
+
+nav{
+
+}
+
+
+
+
+
+
+
+// Media Query Starts.............................
+@media (max-width: 600px){
+	.headerTop{
+		flex-wrap: wrap;
+		
+		.header-top-left{
+			flex-basis: 100%;
+			justify-content: center;
+		}
+
+		.header-top-right{
+			flex-basis: 100%;
+			ul{
+				justify-content: center;
+				margin-bottom: .5rem;
+			}
+		}
+
+	}
+}
