@@ -66,8 +66,38 @@ header hr{
 	border-top: .1rem solid #76586e;
 }
 
-nav{
+.logo-and-search{
+	display: flex;
+	margin: 1rem 5rem;
+	align-items: center;
+}
 
+.logo{
+	font-size: 2.5rem;
+	.logoFirst{
+		color: #497d40;
+	}
+}
+
+.search{
+	margin-left: auto;
+	input[type=text]{
+		padding: .5rem .5rem;
+		float: left;
+	}
+	button[type=submit]{
+		padding: .63rem .6rem;
+		float: left;
+		cursor: pointer;
+		border: 1px solid #b9b9b9;
+		border-left: none;
+		.fa{
+			@include centeringItems;
+		}
+	}
+}
+
+nav{
 }
 
 
@@ -77,7 +107,7 @@ nav{
 
 
 // Media Query Starts.............................
-@media (max-width: 600px){
+@media (max-width: 680px){
 	.headerTop{
 		flex-wrap: wrap;
 		
@@ -94,5 +124,27 @@ nav{
 			}
 		}
 
+	}
+
+	.logo-and-search{
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		div{
+			display: flex;
+			flex-basis: 100%;
+			justify-content: center;
+			padding: 1rem;
+		}
+	}
+}
+
+
+@media (max-width: 450px){
+	.headerTop{
+		margin: .5rem;
+	}
+
+	.logo-and-search{
+		margin: .5rem;
 	}
 }
