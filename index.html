@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Website-2</title>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Oswald|Quicksand" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -38,9 +39,32 @@
 		</div>
 
 		<nav>
-		
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Portfolio</a></li>
+				<li><a href="#">Gallery</a></li>
+				<li><a href="#">About</a></li>
+				<li class="dropdown">
+				    <a href="javascript:void(0)" class="dropbtn">
+				    	Dropdown
+				    	<i class="fas fa-caret-down"></i>
+				    </a>
+				    <div class="dropdown-content">
+				      <a href="#">Link 1</a>
+				      <a href="#">Link 2</a>
+				      <a href="#">Link 3</a>
+				    </div>
+			  	</li>
+			</ul>
 			
 		</nav>
+
+		<section class="pseudoNav">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><button class="hamburgerButton"><i class="fas fa-bars fa-2x"></i></button></li>
+			</ul>
+		</section>
 	</header>
 
 
