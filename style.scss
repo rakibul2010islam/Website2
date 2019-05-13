@@ -488,7 +488,7 @@ footer{
 .company-detail-container{
 	margin-left: 2rem;
 	h3{
-		margin-bottom: 1rem;
+		margin-bottom: .5rem;
 	}
 	div p{
 		padding: .3rem 0;
@@ -496,13 +496,59 @@ footer{
 }
 
 .contact-us-container{
-	text-align: center;
+	form{
+		margin-top: 1.1rem;
+	}
+	input{
+		padding: .3rem 0;
+		width: 100%;
+		margin-bottom: .5rem;
+	}
+	textarea{
+		width: 100%;
+	}
+	button{
+		padding: .7rem;
+		margin-top: .2rem;
+		&:hover{
+			cursor: pointer;
+		}
+	}
+}
+
+footer hr{
+	border-top: 1px solid black;
+	border-bottom: 1px solid grey;
+}
+
+.footer-bottom{
+	margin: 0 5rem;
+	margin-top: 1.5rem;
 }
 
 
 
-
 // Media Query Starts.............................
+@media (max-width: 1100px){
+	.footer-top{
+		flex-wrap: wrap;
+		.blog-post-container{
+			flex-basis: 100%;
+			margin-bottom: 2rem;
+		}
+
+		.company-detail-container{
+			flex-basis: 45%;
+			margin-left: 0rem;
+		}
+
+		.contact-us-container{
+			flex-basis: 45%;
+			margin-left: auto;
+		}
+	}
+}
+
 @media (max-width: 900px){
 	nav ul li{
 		display: none;
@@ -547,7 +593,6 @@ footer{
 		}
 
 	}
-
 
 }
 
@@ -612,6 +657,34 @@ footer{
 
 	}
 
+	.footer-top{
+		margin: 3rem;
+		.blog-posts{
+			flex-wrap: wrap;
+			div:first-child{
+				height: 8rem;
+				flex-basis: 30%;
+				margin-bottom: 1.5rem;
+			}
+			div:last-child{
+				flex-basis: 100%;
+			}
+		}
+		.company-detail-container{
+			flex-basis: 100%;
+		}
+
+		.contact-us-container{
+			flex-basis: 100%;
+			margin-top: 1.5rem;
+		}
+	}
+
+	.footer-bottom{
+		margin: 1rem;
+		text-align: center;
+	}
+
 }
 
 
@@ -662,6 +735,21 @@ footer{
 		}
 
 	}
+
+	.footer-top{
+		margin: 1rem;
+		.blog-posts{
+			div:first-child{
+				flex-basis: 50%;
+			}
+		}
+		
+	}
+
+	.footer-bottom{
+		font-size: .9rem;
+	}
+
 }
 
 // W3School slider media query...........
